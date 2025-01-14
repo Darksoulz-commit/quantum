@@ -1,0 +1,137 @@
+pusd __name__        -->for pushing the dir name
+popd                 -->for poping thr dir
+tree -d              -->for showing the dir tree
+cat -n __name__      -->for viewing the file -n denotes the line number
+less -N  __name__       -->for viewing file but in a screen manner _N denotes the line number
+head -(value) __name__  -->for viewing first few lines -(values) denotes the how many want to show eg: head -20 __name__
+tail -(value) __name__  -->same as head but at end
+tac __name__ --> for showing txt in a backwards
+touch __name__           -->to create a file
+echo > __name__         -->alternate way to create a file
+mv __oldname__ __newname__ --> change the name of the dir or file 
+rm -f                   --> forcefully remove a file
+rm -i                   -->interactively remove a file
+rmdir -rf               -->forcefully remove a dir
+do_something > output-file
+do_something < input-file
+do_something 2> error-file
+do_something > all-output-file 2>&1
+do_something >& all-output-file
+locate zip | grep bin
+find . -name "__name__" -ls --> to find the stuff
+ls *__extension__       --> To list out the all things with .(extname)
+echo line ome > myfile  --> send the output to a command line
+echo line two >> myfile --> will append the output to an existing file
+echo line three >> myfile --> 
+cat << EOF > myfile --> this will can edit the file at last senf EOF
+nano __name__ --> to view the file
+# vim editors
+    vi __name__
+    vi -r __name__      --> start and edit file in recovery mode from a sysyem crash
+    :r __name__         --> Read in file and insert at current position
+    :w                  --> Write to the file
+    :w __file__         --> Write out to __file__
+    :w! __file__        --> overwrite file
+    :x or :wq           --> Exit and write out modified file
+    :q                  --> quit
+    :q!                 --> quit eventhough modification is not saved
+    ^l                  --> center the screen
+    /__pattern__        --> to search for a forward pattern
+    ?__pattern__        --> backwards pattern
+
+whoami      --> to know the user
+who         --> more detailed info
+
+~/.bash_profile      -->
+~/.bash_login        -->
+~/.profile           -->
+
+alias       --> to show all the alias
+
+useradd __name__
+userdel __name__
+
+
+-|----|---|---|---------------------|
+ |  4 |2  | 1 |                     |
+-|----|-- |---|---------------------|
+0|  - | - | - |   no permision      |
+1|  - | - | X |   only exe          |
+2|  - | W | - |   only write        |
+3|  - | W | X |   write and exe     |
+4|  R | - | - |   only read         |
+5|  R | - | X |   read and exe      |
+6|  R | W | - |   read and write    |
+7|  R | W | X |   all               |
+------------------------------------|
+
+
+cat __name__ __name__    --> merge multiple file
+cat __name__ __name__ > __name__    --> merge in a new file
+cat __name__ >> __existingfile__    --> append in a existing file
+
+
+
+head -3     --> show the first 3 Line
+tail -2     --> show the last 2 Line
+tail -f     --> continuously display the lines
+
+sed s/pattern/replace_string/ __name__      --> substitute first string occurance in every line
+sed s/pattern/replace_string/g  __name__      --> substitute all string occurance in every line
+sed 1,3s/pattern/replace_string/g  __name__      --> substitute all string occurance in a range of lines
+sed -i s/pattern/replace_string/g  __name__      --> save chages for string substitute in the same file
+
+awk 'command' __name__      --> specify a command directly at the command linr
+awk -f __sctroptfile__ __name__     --> specific a file that contains the script to be executed
+
+
+eg: awk '{ print $0 }' __name__  --> print entilre file
+    awk -F: '{ print $1 }' __name__  --> print first field (Column) of every line, seperated by a colon
+    awk -F: '{ print $1 $7 }' __name__  --> print first and seventh field of every line
+
+sort __name__       --> sort the lines
+cat __name__ __name__ | sort    -->combine sort
+sort -r __name__ --> sort in reverse
+sort -k 3 __name__      --> sort the lines bu the 3rd field on each line instead of the begining
+
+sort __name__ __name__ | uniq > __name__        --> remove the duplicate and store in the new file
+    sort -u __name__ __name__ > __name__
+
+uniq -c __name__    --> count the duplicate entry
+
+paste __name__ __name__         --> to paste the two files
+
+paste -d __name__ __name__     -->
+        eg: paste -d ':' __name__ __name__     --> to combine two with :
+
+
+join __name__ __name__      --> to join the two files
+
+wc __nameofthefile__    --> word count
+split  __nameofthefile__ __tostorethefile__         -->to split the line and store it
+
+
+[^ ]*?@[^ ]*?\.[^ ]*
+
+grep [pattern] __name__     -->search for the pattern
+
+grep -v [pattern] __name__  --> print all that do not match the pattern
+
+grep [0-9] __name__         -->print all that contains the number 0 through 9
+
+grep -c 3 [pattern] __name__    --> print context of lines here 3 lines
+
+cat __name__ | tr a-z A-Z       --> to change all tha small int capital letters
+
+echo 'the geek stuff' | tr -d 't'   --> to delete the t letters
+
+ 
+-l  --> display the number of lines
+-c  --> display the number of bytes
+-w  --> display the number of words
+
+
+cut --> to cut the Column
+
+ls -l | cut -d" " -f3       --> to display the 3rd column
+

@@ -1,0 +1,320 @@
+https://youtu.be/sWbUDq4S6Y8?si=k2MxHft83gGgg7Tn
+
+# 3 major distribution familes in Linux 
+    -- Red Hat
+    -- Debian
+    -- Suse
+
+# Linux terminology
+    Kernel
+        -- Glue between hardware and application
+        -- For example Linux Kernel
+    distribution
+        -- Collection of software making up a Linux based OS
+        -- for example Red Hat Enterprice Linux, Fedora, Ubuntu, and Gentoo
+    Boot Loader
+        -- program that boots the OS
+        -- for example GURB and ISOLINUX
+    Service
+        -- Program that runs as a background process
+        -- for example httpd, nfsdm ftpd, and named
+    Filesystem
+        -- Method for storing and organizing Files
+        -- for example ext3, ext4, FAT, XFS, NTFS, and BTRFS
+    X Windows System
+        -- provides std tool kit and protocol to build GUI on all linux System
+    Desktop Emvironment
+        -- GUI on top of the OS
+        -- for example Gnome, KDE, Xfce, and Fluxbox
+    Command Line
+        -- interface for typing commands on top of the OS
+    Shell
+        -- command line intrepreter that interprets the command line input and instructs the OS to perform any necessay tasks and commands.
+        -- for example bash, tcsh and zsh
+
+^^ summary
+    -- Linux borrows from UNIX
+    -- Linux access features through Files
+    -- Linux is a multitasking, Multi user OS with buit in network and Services 
+    -- Linux distribution includes Kernel and tools
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Structure for loading Linux
+
+Power on
+|
+BIOS
+|
+Master Boot Record
+(MBR) also known as First Sector of the Hard Disk
+|
+Boot loader(eg: GURB)
+|
+Kernel(Linux OS)
+|
+Initial RAM Disk - initramfs image
+|
+/sbin/init (parent process)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Linux File System
+
+Linux stores the files in the manner of 
+-Shape -Size -Type
+
+FileSysten supports by Linux
+ --> conventional disk Filesystem
+    (ext3, ext4, XFS, Btrfs, JFS, NTFS, Vfat, etc..)
+--> Flash storage FileSysten
+    (Ubifs, jffs2, Yaffs, etc..)
+--> Database FileSysten
+--> Special purpose Filesystem
+    (procfs, Sysfs, tmpfs, squashfs, debugfs, etc..)
+
+# Partitions and FileSysten
+                                    | Windows       |Linux
+------------------------------------|---------------|----------------------------
+Partitions                          |Disk 1         |/dev/sdal   
+FileSysten Type                     |NTFS/VFAT      |EXT3/EXT4/XFS/BTRFS...
+Mounting parameters                 |DriveLetter    |MountPoint
+Base Folder(where OS is started)    |C:\            |/
+
+
+# the Filesystem Hierarchy Standard(FHS)
+
+/bin	--> important binary applications
+/boot	--> boot configuration files, kernels, and other files needed at boot time.
+/dev	--> System device files.
+/etc	--> configuration files, startup scripts, etc.
+/home	--> List of home directories for different users
+/lib	--> system libraries, shared libraries
+/lost+found	--> a lost+found system for files that exist under the root (/) directory
+/media	--> automatically mounted (loaded) partitions on your hard drive and removable media such as CDs, digital cameras, etc.
+/mnt	--> manually mounted filesystems on your hard drive
+/opt	--> 3rd part applications to be installed
+/proc	--> Maintains information about the state of the system, including currently running processes.
+/root	--> root user's home directory.
+/sbin	--> important system binaries
+/srv	--> contain files that are served to other systems
+/sys	--> system files
+/tmp	--> temporary files
+/usr	--> applications and files that are mostly available for all users to access
+/var    -->
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Graphical interface
+
+    -- Control basic config with system Settings
+    -- Linux always uses UTC
+    -- the NTP sets time via internet
+    -- the display pannel configures screens
+    -- the network manager configures network Settings
+    -- dpkg & RPM are package management system
+    -- Debian distros uses dpkg and apt-based utils
+    -- RPM was developed by Red Hat
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Command line Operation
+
+    cat --> used to type out a file (or a combine file)
+    head --> used to show the first few lines of a file
+    tail --> used to show the last few lines of a file
+    man --> used to view documentation
+
+3 basic elements command -options arguments
+
+SUDO: to give the admin privallege
+
+shutdown..
+    halt and poweroff commands --> shutdown -h (sudo shutdown -h 'time'(10:00) "__message__")
+    restart --> shutdown -r
+
+Locating applications
+
+$every executable files are in  "/bin" or "/usr/bin" or "/sbin" or "/usr/sbin" or "/opt"
+
+$user account space (/home/student/bin)
+
+$To search for the particular app or file use (whereis __name__) (eg whereis __name.txt__)
+
+# standered filesystems
+    name                symbol name     value
+    --------------------------------------------------
+    -- std input    --> stdin           --> 0
+    -- std output   --> stdout          --> 1
+    -- std error    --> stderr          --> 2
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# pipes
+
+symbol --> |
+for executing in a parallel way for more efficient
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# locate, find 
+
+    to locate a file
+    grep to locate some specific things
+------------------------------------------------------------------------
+
+# wildcards and Matching File Names
+
+wildcards
+
+?       | matches any single character
+        |
+*       |matches any string of characters
+        |
+[set]   | matches any characters in the set od characters, for example [adf] will match any occurance of a,d or f
+        |
+[!set]  |match any character not in the set
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# find program
+
+
+    -name --> just a name
+    -iname --> ignore the case of the name
+    -type --> certain type
+    d --> dir
+    l -->symbolic  link
+    f -->regular file
+    eg: find /(__name) -type d(dir) or f(only name) -name __name__
+    eg: find . -type d -maxdepth 1 --> this is ignore the sub dir only returns the single dir
+
+
+# advanced find program
+    -exec --> for the search criteria
+    eg: find -name '*.__extname__' -exec rm {} ';   // this will find and removes the files that has the certain extension'
+    eg: find . -type f -exec grep -H log {} \;  --> this wil find all the file that has log in it
+    or
+    find . -type f -exec ls -l {} \;  --> short hand
+
+# finding Files based on the Time and size
+
+    find / -ctime __no of days__        -->find with respect to time
+        *-cmin, -amin, -mmin
+    
+    find / -size 0                      -->find with respect to size
+
+# package handling
+
+we can use rpm, dnf, zypper
+
+    dpkg --list     --> to show all the package 
+    dpkg --listfiles __name__   --> to show all the stuffs in that package
+    dpkg --remove __name__  --> to remove the package
+    rpm -qa | grep __name__ --> to remove the package
+    rpm  -q(querry)i(info)l(list) __name__  --> to see the package info
+    la -lf $(rpm -ql __name__)      --> to see more details
+
+
+# documentation
+
+    man pages
+        man socket      --> to display the sockets
+        -f socket or    whatis socket    --> all pages in the sockets
+        man (page number) socket  --> to access the particular page in the socket
+        man --help      --> quick ref
+    
+    help command
+        help
+
+# process
+
+    types
+        * interactive process  --> manual
+        * Batch process     --> automatic
+        * Daemons       --> server runs continuously 
+        * Threads       --> lightweight process shres the memo
+        * kernel Threads        --> neither start, terminate
+
+# process scheduling
+    
+    process ID
+        * PID       --> unique process ID
+        * PPID      --> Process (Parent) that started this process
+        * TID       --> Thread ID
+
+# process terminate
+
+    kill -SIGKILL <pid>
+    kill -9 <pid>
+
+IDs
+    --user IDs
+
+        * RUID = user who started the process
+        * RGID = the group that started the process
+
+        * EUID = access rights of the user
+        * EGID = access right of the group
+
+
+# priorities
+
+    its specifies a nice value
+    eg: cat nice.out
+
+    -20 to 19 is the limit and -20 has the highes means -20 has higher priority
+
+# Load Average
+    it can be seen by
+        * w
+        * top
+        * uptime
+
+# ps --> processes
+
+    ps --> to show all the process runing
+
+# PS Tree --> to show the process in a Tree
+
+# sheduling the process
+
+    at  --> use for sheduling the time
+    eg: at now +2 days      --> sheduling after 2 days
+
+# Cron --> time based utility program
+    * MIN --> minuite
+    * HOUR --> Hour field
+    * DOM --> Day of Month
+    * MON --> Month field
+    * DOW --> Day of Week
+    * CMD --> command
+
+    eg: MIN HOUR DOM MON DOW cmd(/path/to/__value.ext__)
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+# Text editors 
+
+    --> basic editors
+        * nano
+        * gedit
+    --> advanced editors
+        * VI
+        * emacs
+
+
+# file Manipulating
+
+    * sort
+    * uniq
+    * paste
+    * join
+    * split
+
+
+-d ---> delimitary
+
+
+As an example, when you change your password with the passwd command, your new password is stored in the file /etc/shadow.
