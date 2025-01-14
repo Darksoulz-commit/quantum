@@ -1,0 +1,290 @@
+ {
+        "id": 1,
+        "first_name": "Aleshia",
+        "last_name": "Tomkiewicz",
+        "company_name": "Alan D Rosenburg Cpa Pc",
+        "address": "14 Taylor St",
+        "city": "St. Stephens Ward",
+        "county": "Kent",
+        "postal": "CT2 7PP",
+        "phone1": "01835-703597",
+        "phone2": "01944-369967",
+        "email": "atomkiewicz@hotmail.com",
+        "web": "http://www.alandrosenburgcpapc.co.uk",
+        "in": "9:3",
+        "out": ""
+    },
+    {
+        "id": 2,
+        "first_name": "Evan",
+        "last_name": "Zigomalas",
+        "company_name": "Cap Gemini America",
+        "address": "5 Binney St",
+        "city": "Abbey Ward",
+        "county": "Buckinghamshire",
+        "postal": "HP11 2AX",
+        "phone1": "01937-864715",
+        "phone2": "01714-737668",
+        "email": "evan.zigomalas@gmail.com",
+        "web": "http://www.capgeminiamerica.co.uk",
+        "in": "9:13",
+        "out": ""
+    },
+    {
+        "id": 3,
+        "first_name": "France",
+        "last_name": "Andrade",
+        "company_name": "Elliott, John W Esq",
+        "address": "8 Moor Place",
+        "city": "East Southbourne and Tuckton W",
+        "county": "Bournemouth",
+        "postal": "BH6 3BE",
+        "phone1": "01347-368222",
+        "phone2": "01935-821636",
+        "email": "france.andrade@hotmail.com",
+        "web": "http://www.elliottjohnwesq.co.uk",
+        "in": "9:46",
+        "out": ""
+    },
+    {
+        "id": 4,
+        "first_name": "Danika",
+        "last_name": "Hendrix",
+        "company_name": "Bristol Wessex Billing Services Ltd",
+        "address": "3 Cartwright Rd",
+        "city": "Milford Ward",
+        "county": "West Sussex",
+        "postal": "RH2 8LJ",
+        "phone1": "01522-376100",
+        "phone2": "01857-324706",
+        "email": "dhendrix@bristolwessexbilling.co.uk",
+        "web": "http://www.bristolwessexbillingservices.co.uk",
+        "in": "10:1",
+        "out": ""
+    },
+    {
+        "id": 5,
+        "first_name": "Blaise",
+        "last_name": "Delfosse",
+        "company_name": "Aldeasa Duty Free",
+        "address": "16 Houndsditch",
+        "city": "Bristol",
+        "county": "Somerset",
+        "postal": "BS1 9RR",
+        "phone1": "01444-879265",
+        "phone2": "01857-568975",
+        "email": "bdelfosse@aldeasadutyfree.co.uk",
+        "web": "http://www.aldeasadutyfree.co.uk",
+        "in": "10:12",
+        "out": ""
+    },
+    {
+        "id": 6,
+        "first_name": "Jackelyn",
+        "last_name": "Valdivia",
+        "company_name": "Brexit Partner",
+        "address": "1 Liverpool St",
+        "city": "Westminster",
+        "county": "London",
+        "postal": "EC2M 7QN",
+        "phone1": "0207-739245",
+        "phone2": "01756-896567",
+        "email": "jvaldivia@brexitpartner.co.uk",
+        "web": "http://www.brexitpartner.co.uk",
+        "in": "11:11",
+        "out": ""
+    },
+    {
+        "id": 7,
+        "first_name": "Clarence",
+        "last_name": "Buhl",
+        "company_name": "Heathrow Airport Limited",
+        "address": "5 Victoria St",
+        "city": "Heathrow",
+        "county": "Surrey",
+        "postal": "TW6 1QG",
+        "phone1": "0207-387903",
+        "phone2": "01455-876423",
+        "email": "cbuhl@heathrowairport.co.uk",
+        "web": "http://www.heathrowairport.co.uk",
+        "in": "8:30",
+        "out": "17:00"
+    },
+    {
+        "id": 8,
+        "first_name": "Amanda",
+        "last_name": "Lichtenstein",
+        "company_name": "Harrods Limited",
+        "address": "87 Brompton Rd",
+        "city": "London",
+        "county": "London",
+        "postal": "SW1X 7XL",
+        "phone1": "0207-525309",
+        "phone2": "01822-334888",
+        "email": "amanda.lichtenstein@harrods.co.uk",
+        "web": "http://www.harrods.co.uk",
+        "in": "10:20",
+        "out": ""
+    },
+    {
+        "id": 9,
+        "first_name": "Courtney",
+        "last_name": "Weisbrod",
+        "company_name": "Fox Connex Communications",
+        "address": "10 Pall Mall",
+        "city": "London",
+        "county": "London",
+        "postal": "SW1Y 5LP",
+        "phone1": "0207-547009",
+        "phone2": "01904-732776",
+        "email": "courtney.weisbrod@foxconnex.com",
+        "web": "http://www.foxconnexcommunications.co.uk",
+        "in": "9:5",
+        "out": ""
+    },
+    {
+        "id": 10,
+        "first_name": "Kenneth",
+        "last_name": "Munoz",
+        "company_name": "Geraldine Bannon Cpa",
+        "address": "8 Red Lion St",
+        "city": "Coventry",
+        "county": "West Midlands",
+        "postal": "CV1 1JX",
+        "phone1": "02476-296463",
+        "phone2": "01798-278344",
+        "email": "kmunoz@geraldinebannoncpa.co.uk",
+        "web": "http://www.geraldinebannoncpa.co.uk",
+        "in": "9:9",
+        "out": ""
+    },
+    {
+        "id": 11,
+        "first_name": "Molly",
+        "last_name": "Mendoza",
+        "company_name": "General Electric Corporation",
+        "address": "20 Broad St",
+        "city": "Kingsbury",
+        "county": "Middlesex",
+        "postal": "NW9 0DR",
+        "phone1": "0208-204388",
+        "phone2": "0208-957006",
+        "email": "molly.mendoza@gecorp.co.uk",
+        "web": "http://www.generalelectriccorporation.co.uk",
+        "in": "9:15",
+        "out": ""
+    },
+    {
+        "id": 12,
+        "first_name": "Patricia",
+        "last_name": "Mcgrath",
+        "company_name": "Gallagher London Ltd",
+        "address": "34 Gower St",
+        "city": "London",
+        "county": "Greater London",
+        "postal": "WC1E 6DP",
+        "phone1": "0207-383090",
+        "phone2": "01922-693741",
+        "email": "patricia.mcgrath@ga-london.com",
+        "web": "http://www.gallagherlondonltd.co.uk",
+        "in": "9:7",
+        "out": ""
+    }
+
+
+/*
+1.  Display the documents where the county begins with 'B'
+*/
+
+db.person.find({county:'/^B/'})
+
+/*
+2. Display the document where the domain email is gmail.com. display only columns 'first_name', 'last_name' and 'email'
+*/
+
+db.person.find(
+  { "email": /@gmail\.com$/ },  
+  { "first_name": 1, "last_name": 1, "email": 1, "_id": 0 }
+)
+
+/*
+3. Display the document where the first_name contains 'Mag'
+*/
+
+db.collection.find(
+  { "first_name": { "$regex": "Mag", "$options": "i" } },
+  { "first_name": 1, "last_name": 1, "email": 1, "_id": 0 }
+)
+
+/*
+4. Find the count of documents group by county
+*/
+
+db.person.aggregate(
+    {$group:{_id:'$county'}},
+    {$count:'first_name'}
+)
+
+/*
+5.  find the  doucments where the firt_name is eric and update the last_name to andrew
+*/
+
+db.person.updateOne({"first_name": 'Evan'}, {$set: {"last_name": 'Andrew'}})
+
+
+/*
+1.  find the  sum of duration for item value equal to 'call'
+*/
+
+db.pd.aggregate([
+  {
+    $match: { type: "call" }  
+  },
+  {
+    $group: {
+      _id: null, 
+      total_duration: { $sum: "$duration" }  
+    }
+  }
+])
+
+
+/*
+2. find the sum of duration groupby item
+*/
+
+db.pd.aggregate([
+  {
+    $group: {
+      _id: "$type", 
+      total_duration: { $sum: "$duration" } 
+    }
+  }
+])
+
+/*
+3. find the sum, average of duration group by month
+*/
+
+db.pd.aggregate([
+  {
+    $group: {
+      _id: " $month: $date", 
+      sum_of_duration: { $sum: "$duration" } ,
+      avg_of_duration: { $avg: "$duration" } 
+    }
+  }
+])
+
+/*
+4. find the maximum and minimum of field 'duration'
+*/
+db.pd.aggregate([
+  {
+    $group: {
+      _id: null, 
+      max_duration: { $max: "$duration" },
+      min_duration: { $min: "$duration" }
+    }
+  }
+])

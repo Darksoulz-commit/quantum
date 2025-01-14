@@ -1,0 +1,29 @@
+DROP TABLE IF EXISTS  Orders;
+
+CREATE TABLE IF NOT EXISTS Orders (
+OrderId INT PRIMARY KEY AUTO_INCREMENT,
+OrderDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+CustomerId INT NOT NULL,
+ProductId INT NOT NULL,
+Quantity INT NOT NULL,
+TotalPrice DECIMAL(5,2) NOT NULL,
+OrderDelivered BOOLEAN DEFAULT FALSE,
+OrderCreated  DATETIME DEFAULT CURRENT_TIMESTAMP(),
+OderUpdated DATETIME DEFAULT CURRENT_TIMESTAMP(),
+FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerID),
+FOREIGN KEY (ProductId) REFERENCES Products(ProductId)
+
+);
+
+SELECT * FROM Orders;
+
+DESC Orders;
+
+INSERT INTO Orders(CustomerId, ProductId, Quantity,TotalPrice,OrderDelivered) values
+(1, 101, 2, 121.2,DEFAULT),
+(2, 102, 2, 121.2,TRUE),
+(3, 103, 2, 121.2,DEFAULT),
+(4, 104, 2, 121.2,1);
+
+
+TRUNCATE TABLE Orders;

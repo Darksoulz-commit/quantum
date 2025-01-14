@@ -1,0 +1,58 @@
+ETL --> Extract Transform Load
+    data integrity
+    data quality
+
+    live data
+    |_ mdm --> runing the process
+    dead data
+    |_ data warehuse --> for analysis
+
+
+
+data flow
+|_connections
+        |_row connections
+        |_itrate connections
+
+orchestration
+|_triggers
+        |_subjob ok / error
+        |_component ok / error
+
+
+statergy in ETL
+    |_Source - all source
+    |_Raw   - in one file no changes
+    |_Staging - qualityfying / clean data
+    |_Fact  - metrics eg: quantity / amount --> fact dimensions model @! may be chage 
+        |_ dimensions --> tables / other details @! no chage     
+    |_Mart -->segrate the data here all aggregate data  and  function come
+
+
+
+star schema 
+
+    fact attached with dimensions
+
+                dimensions
+                    |    
+    dimensions-  fact -dimensions
+                    |
+                dimensions
+
+snow_flake schema
+
+
+---------------------------------------------------------------------------------------
+day 2
+
+Metadata:
+    we can access the components setup in the same job, we cant use it in another job
+    for that Metadata will help
+
+context
+
+java components
+    t java      -- no schema
+    t java row  -- row by row operation
+    t flex      -- both

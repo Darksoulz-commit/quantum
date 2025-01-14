@@ -1,0 +1,30 @@
+{
+  "city": {
+    "Manisha sharma": "mumbai",
+    "M chowdhury": "delhi",
+    "A Chow": "perth",
+    "David": "colombo",
+    "samyaul hridoy": "new york"
+  },
+  "country": {
+    "Manisha sharma": "India",
+    "M chowdhury": "India",
+    "A Chow": "Australia",
+    "David": "Sri Lanka",
+    "samyaul hridoy": "Usa"
+  },
+  "degree": {
+    "Manisha sharma": "MSC",
+    "M chowdhury": "B.A.",
+    "A Chow": "PHD",
+    "David": "BBM",
+    "samyaul hridoy": "Bsc"
+  },
+  "specilization": {
+    "Manisha sharma": "maths",
+    "M chowdhury": "physics",
+    "A Chow": "maths",
+    "David": "parmacy",
+    "samyaul hridoy": "medicine"
+  }
+}

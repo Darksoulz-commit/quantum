@@ -1,0 +1,61 @@
+orders
+[
+
+  {
+    "_id": ObjectId("60f9d7ac345b7c9df348a86e"),
+    "order_number": "ORD001",
+    "customer_id": ObjectId("60f9d7ac345b7c9df348a86d"),
+    "product_id": 1
+  },
+  {
+    "_id": ObjectId("60f9d7ac345b7c9df348a86f"),
+    "order_number": "ORD002",
+    "customer_id": ObjectId("60f9d7ac345b7c9df348a86d"),
+    "product_id": 2
+  }
+]
+
+
+cutomers
+[
+  {
+    "_id": ObjectId("60f9d7ac345b7c9df348a86d"),
+    "name": "John Doe",
+    "email": "john@example.com"
+  },
+  {
+    "_id": ObjectId("60f9d7ac345b7c9df348a86e"),
+    "name": "Alice Smith",
+    "email": "alice@example.com"
+  }
+]
+
+
+product[
+    {
+        "_id": 1,
+        "name": "tesla"
+    },
+     {
+        "_id": 2,
+        "name": "ford"
+    }
+]
+
+db.orders.aggregate([
+    {$lookup: {
+      from: "customers",
+      localField: "customer_id",
+      foreignField: "_id",
+      as: "customer_details"
+    }},
+
+
+    {$lookup: {
+        from: "products",
+        localField: "product_id",
+        foreignField: "_id",
+        as: "product_details"
+         }}
+])
+    { $unwind: 'customers' },
