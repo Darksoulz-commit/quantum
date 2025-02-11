@@ -1,0 +1,101 @@
+storing and retrival of data
+mostly used in rdbms
+redis and celery
+pyspark rdd resilient disrtibuted db
+
+
+advantage
+multiple data model compatibility
+enhances scalibility and avilablity
+global data disrtibution
+
+architecture of monogo db
+   |_ sharding --  partition the data
+   |_ horizontal scaling
+
+cncf - cloud native computiong foundation 
+proximity--> things deliverd accoring to the location
+
+CAP theorem
+    |_ consistency, avilablity, partition tollereence
+    mongo db is cp only
+    |_ partition -- if primary goes down the secondary will be elected and act as a primary
+
+sprain
+    scalibility
+    performace
+    relaxed consistency
+    agility
+    intricacy
+    necessity
+
+database server -- to store the info
+database -- logical entity  for grouping specific data
+
+
+components in mongo db
+    Database
+    collection -- group of documents
+    documents -- key value store
+
+advantage of mongo db
+   |_ schema less
+   |_ structure of a single object is clear
+   |_ no complex join
+   |_ deep query avilablity
+   |_ tuning
+   |_ ease of scale out
+   |_ uses internaml memo for storing the working set , enabling the fast access the data
+
+why mongo_db
+   |_ documents oriented storage
+   |_ index on any attibute
+   |_ replication and high vailablity
+   |_ auto sharding
+   |_ rich queries
+   |_ fast in-place update
+
+data modeling
+    |_like relationshops
+
+
+aggregate function
+    |_pipeline --> its an array
+        |__ match,group,sort
+
+aggregate stage limit
+    its a memory full fill it uses memory to run a task
+
+generator - giving datas chunk by chunk
+
+concat:
+db.bookOrders.aggregate([{$project:{full_name:{$concat:['$first_name' ,' ','$last_name']}}}])
+
+count:
+db.bookOrders.aggregate([{$count: "first_name" }])
+
+count all genre:
+db.bookOrders.aggregate([
+{$group: {_id:'$genre'}},
+{$count: "count" }
+])
+
+look ups:
+db.orders.aggregate([
+  {
+    $lookup: {
+      from: "customers",
+      localField: "customer_id",
+      foreignField: "_id",
+      as: "customer_details"
+    }
+  }
+])
+
+scram --> salted challenge response authatication system
+sha-1 --> 128 bits
+sha -256 -->  
+
+
+replication
+  |_
